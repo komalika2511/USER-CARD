@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    color: lightgoldenrodyellow;
+   display: flex;
+   justify-content: center;
+   background-color: black;
+}
+.container {
+    width: 350px;
+   height: 500px;
+   perspective: 600;
+}
+.card {
+height: 100%;
+width: 100%;
+position: relative;
+transition: transform 1500ms;
+transform-style: preserve-3d;
+}
+.container:hover >.card{
+    cursor: pointer;
+    transform: rotateY(180deg) rotateZ(180deg);
+}
+.front,.back{
+    border-radius: 5rem; 
+width: 100%;
+height: 100%;
+position: absolute;
+}
+.back {
+background-image: url('02.jpg'); 
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 5rem;
+backface-visibility: hidden;
+transform: rotateY(180deg) rotateZ(180deg);
+background-position:center;
+box-shadow:15px 15px 15px  black;
+
+
+}
+
+.back > h1 {
+    color: black;
+    box-shadow: 3px 3px 3px 3px black;
+
+
+}
+.back > p {
+    color: black;
+font-weight:900 ;
+font-size: xx-large;
+text-align: center;
+
+}
+.back > a {
+    font-size: larger;
+    color: blue;
+    font-weight: bolder;
+}
+.front {
+    background-color: black;
+    box-shadow:  10px 10px 10px white;
+}
+.front  >img{
+   width: 351px;
+   height: 250px;
+   margin: 100px -1px 0 -1px;
+   position: absolute;
+   opacity: 0.5;
+}
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image > img {
+    width: 100px;
+    margin: 350px 0 0 -20px;
+    height: fit-content;
+    border-radius: 50px;
+    position: absolute;
+    box-shadow: 3px 3px 3px 3px blue;
+
+}
+h2 {
+    position: absolute;
+    margin: 300px  0 0 30px;
+    box-shadow: 3px 3px 3px 3px blue;
+
+} 
